@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="12b5839c-023a-4e69-a7ed-68956119472f" name="Changes" comment="feat: inicio contrato de requisição getPedidos" />
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
+      </list>
+    </option>
+  </component>
+  <component name="FormatOnSaveOptions">
+    <option name="myRunOnSave" value="true" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$/.." />
+  </component>
+  <component name="GitToolBoxStore">
+    <option name="projectConfigVersion" value="5" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 5
+}</component>
+  <component name="ProjectId" id="2Ql5kaUCjwhsrs7S9F0ROLslR5C" />
+  <component name="ProjectLevelVcsManager">
+    <ConfirmationsSetting value="2" id="Add" />
+  </component>
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+    <option name="showMembers" value="true" />
+  </component>
+  <component name="PropertiesComponent"><![CDATA[{
+  "keyToString": {
+    "RunOnceActivity.ShowReadmeOnStart": "true",
+    "git-widget-placeholder": "main",
+    "last_opened_file_path": "/home/h3nriqueassis/Github/SaaS-Multi-Tenancy-Delivery-System/saas-painel/src/app/(inside)/produtos",
+    "node.js.detected.package.eslint": "true",
+    "node.js.detected.package.standard": "true",
+    "node.js.detected.package.tslint": "true",
+    "node.js.selected.package.eslint": "(autodetect)",
+    "node.js.selected.package.standard": "",
+    "node.js.selected.package.tslint": "(autodetect)",
+    "nodejs_package_manager_path": "npm",
+    "settings.editor.selected.configurable": "actions.on.save",
+    "ts.external.directory.path": "/home/h3nriqueassis/Github/SaaS-Multi-Tenancy-Delivery-System/saas-painel/node_modules/typescript/lib",
+    "vue.rearranger.settings.migration": "true"
+  }
+}]]></component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="$PROJECT_DIR$/src/app/(inside)/produtos" />
+      <recent name="$PROJECT_DIR$/src/app/(inside)/categorias" />
+    </key>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="12b5839c-023a-4e69-a7ed-68956119472f" name="Changes" comment="" />
+      <created>1685915471845</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1685915471845</updated>
+      <workItem from="1685915472919" duration="574000" />
+      <workItem from="1690073347339" duration="2584000" />
+      <workItem from="1690131310195" duration="5073000" />
+      <workItem from="1691377855083" duration="3480000" />
+      <workItem from="1692275634901" duration="16005000" />
+    </task>
+    <task id="LOCAL-00001" summary="init project">
+      <created>1685915508684</created>
+      <option name="number" value="00001" />
+      <option name="presentableId" value="LOCAL-00001" />
+      <option name="project" value="LOCAL" />
+      <updated>1685915508684</updated>
+    </task>
+    <task id="LOCAL-00002" summary="chore(package.json): install UI lib(MUI)">
+      <created>1685916013058</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1685916013058</updated>
+    </task>
+    <task id="LOCAL-00003" summary="feat: limpeza de codigo e inicio da estrutura de diretorios">
+      <option name="closed" value="true" />
+      <created>1690074297906</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1690074297906</updated>
+    </task>
+    <task id="LOCAL-00004" summary="feat: criando layout de login">
+      <option name="closed" value="true" />
+      <created>1690075923336</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1690075923336</updated>
+    </task>
+    <task id="LOCAL-00005" summary="feat: criando pagina de login">
+      <option name="closed" value="true" />
+      <created>1690136307405</created>
+      <option name="number" value="00005" />
+      <option name="presentableId" value="LOCAL-00005" />
+      <option name="project" value="LOCAL" />
+      <updated>1690136307405</updated>
+    </task>
+    <task id="LOCAL-00006" summary="fix: ajuste no redirecinamento de esqueci minha senha, e tratativa das mensagens de erro">
+      <option name="closed" value="true" />
+      <created>1691379056538</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1691379056538</updated>
+    </task>
+    <task id="LOCAL-00007" summary="feat: tela esqueci minha senha">
+      <option name="closed" value="true" />
+      <created>1691379833009</created>
+      <option name="number" value="00007" />
+      <option name="presentableId" value="LOCAL-00007" />
+      <option name="project" value="LOCAL" />
+      <updated>1691379833009</updated>
+    </task>
+    <task id="LOCAL-00008" summary="feat: tela confirmação de senha">
+      <option name="closed" value="true" />
+      <created>1691380919431</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1691380919431</updated>
+    </task>
+    <task id="LOCAL-00009" summary="feat: tela link expirado">
+      <option name="closed" value="true" />
+      <created>1691381318907</created>
+      <option name="number" value="00009" />
+      <option name="presentableId" value="LOCAL-00009" />
+      <option name="project" value="LOCAL" />
+      <updated>1691381318907</updated>
+    </task>
+    <task id="LOCAL-00010" summary="feat: inicio do layout das telas internas">
+      <option name="closed" value="true" />
+      <created>1692277444537</created>
+      <option name="number" value="00010" />
+      <option name="presentableId" value="LOCAL-00010" />
+      <option name="project" value="LOCAL" />
+      <updated>1692277444537</updated>
+    </task>
+    <task id="LOCAL-00011" summary="feat: header criado">
+      <option name="closed" value="true" />
+      <created>1692280521149</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1692280521149</updated>
+    </task>
+    <task id="LOCAL-00012" summary="feat: drawerHeader criado">
+      <option name="closed" value="true" />
+      <created>1692282721919</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1692282721919</updated>
+    </task>
+    <task id="LOCAL-00013" summary="feat: pedidos parte superior">
+      <option name="closed" value="true" />
+      <created>1692284127417</created>
+      <option name="number" value="00013" />
+      <option name="presentableId" value="LOCAL-00013" />
+      <option name="project" value="LOCAL" />
+      <updated>1692284127417</updated>
+    </task>
+    <task id="LOCAL-00014" summary="style: add skeleton">
+      <option name="closed" value="true" />
+      <created>1692294732919</created>
+      <option name="number" value="00014" />
+      <option name="presentableId" value="LOCAL-00014" />
+      <option name="project" value="LOCAL" />
+      <updated>1692294732919</updated>
+    </task>
+    <task id="LOCAL-00015" summary="feat: inicio contrato de requisição getPedidos">
+      <option name="closed" value="true" />
+      <created>1692302181024</created>
+      <option name="number" value="00015" />
+      <option name="presentableId" value="LOCAL-00015" />
+      <option name="project" value="LOCAL" />
+      <updated>1692302181024</updated>
+    </task>
+    <option name="localTasksCounter" value="16" />
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+  <component name="VcsManagerConfiguration">
+    <MESSAGE value="init project" />
+    <MESSAGE value="chore(package.json): install UI lib(MUI)" />
+    <MESSAGE value="feat: limpeza de codigo e inicio da estrutura de diretorios" />
+    <MESSAGE value="feat: criando layout de login" />
+    <MESSAGE value="feat: criando pagina de login" />
+    <MESSAGE value="fix: ajuste no redirecinamento de esqueci minha senha, e tratativa das mensagens de erro" />
+    <MESSAGE value="feat: tela esqueci minha senha" />
+    <MESSAGE value="feat: tela confirmação de senha" />
+    <MESSAGE value="feat: tela link expirado" />
+    <MESSAGE value="feat: inicio do layout das telas internas" />
+    <MESSAGE value="feat: header criado" />
+    <MESSAGE value="feat: drawerHeader criado" />
+    <MESSAGE value="feat: pedidos parte superior" />
+    <MESSAGE value="style: add skeleton" />
+    <MESSAGE value="feat: inicio contrato de requisição getPedidos" />
+    <option name="LAST_COMMIT_MESSAGE" value="feat: inicio contrato de requisição getPedidos" />
+  </component>
+</project>
