@@ -5,7 +5,7 @@ import {Box, Button, CircularProgress, Grid, InputAdornment, Skeleton, TextField
 import {Refresh, Search} from "@mui/icons-material";
 import {Order} from "@/types/Order";
 import {api} from "@/libs/api";
-import {OrderItem} from "@/components/OrderItem";
+import {OrderItem} from "../../../components/OrderItem";
 
 const Page = () => {
     const [searchInput, setSearchInput] = useState('')
