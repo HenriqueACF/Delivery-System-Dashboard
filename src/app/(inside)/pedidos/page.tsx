@@ -1,12 +1,29 @@
 "use client"
 
-import {useState} from "react";
+import {useEffect, useState} from "react";
 import {Box, Button, CircularProgress, Grid, InputAdornment, Skeleton, TextField, Typography} from "@mui/material";
 import {Refresh, Search} from "@mui/icons-material";
+import {Order} from "@/types/Order";
+import {api} from "@/libs/api";
+import {OrderItem} from "@/components/OrderItem";
 
 const Page = () => {
     const [searchInput, setSearchInput] = useState('')
     const [loading, setLoading] = useState(false)
+    const [orders, setOrders] = useState<Order[]>([])
+
+    const getOrders = async () =>{
+        setSearchInput('')
+        setOrders([])
+        setLoading(true)
+        const orderList: Order[] = await api.getOrders()
+        setOrders(orderList)
+        setLoading(false)
+    }
+
+    useEffect(()=>{
+        getOrders()
+    }, [])
 
     const handleSearchInput = () => {
 
@@ -27,7 +44,9 @@ const Page = () => {
                     </Typography>
                     {loading && <CircularProgress size={24}/>}
                     {!loading &&
-                        <Button sx={{justifyContent: {xs: 'flex-start', md: 'center'}}}>
+                        <Button
+                            onClick={getOrders}
+                            sx={{justifyContent: {xs: 'flex-start', md: 'center'}}}>
                             <Refresh/>
                             <Typography
                                 component="div"
@@ -78,6 +97,13 @@ const Page = () => {
                         </Grid>
                     </>
                 }
+                {!loading && orders.map((item, index)=>(
+                    <Grid key={index} item xs={1}>
+                        <OrderItem
+                            item={item}
+                        />
+                    </Grid>
+                ))}
             </Grid>
         </Box>
     )
