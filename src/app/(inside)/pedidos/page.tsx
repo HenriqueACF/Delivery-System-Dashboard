@@ -11,6 +11,8 @@ import {OrderStatus} from "@/types/OrserStatus";
 const Page = () => {
     const [searchInput, setSearchInput] = useState('')
     const [loading, setLoading] = useState(false)
+    const [filteredOrders, setFilteredOrders] = useState<Order[]>([])
+    //"FAKE BACKUP DOS PEDIDOS"
     const [orders, setOrders] = useState<Order[]>([])
 
     const getOrders = async () =>{
@@ -26,11 +28,31 @@ const Page = () => {
         getOrders()
     }, [])
 
-    const handleSearchInput = () => {
+    useEffect(()=>{
+        setSearchInput('')
+        setFilteredOrders(orders)
+    }, [orders])
 
-    }
+    // const handleSearchInput = () => {
+    //
+    // }
 
-    const handleSearchKey = () => {
+    const handleSearchKey = (event: KeyboardEvent) => {
+        console.log(event.code)
+        if(event.code.toLowerCase() === 'enter'){
+            if(searchInput != ''){
+                let newOrders: Order[] = []
+
+                for(let i in orders){
+                    if(orders[i].id.toString() === searchInput){
+                        newOrders.push(orders[i])
+                    }
+                }
+                setFilteredOrders(newOrders)
+            } else {
+                setFilteredOrders(orders)
+            }
+        }
 
     }
 
@@ -67,7 +89,7 @@ const Page = () => {
                     </Box>
                     <TextField
                         value={searchInput}
-                        onChange={handleSearchInput}
+                        onChange={e => setSearchInput(e.target.value)}
                         onKeyUp={handleSearchKey}
                         placeholder="Pesquise um pedido"
                         variant="standard"
@@ -104,7 +126,7 @@ const Page = () => {
                             </Grid>
                         </>
                     }
-                    {!loading && orders.map((item, index)=>(
+                    {!loading && filteredOrders.map((item, index)=>(
                         <Grid key={index} item xs={1}>
                             <OrderItem
                                 item={item}
