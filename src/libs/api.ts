@@ -1,6 +1,7 @@
 import {Order} from "@/types/Order";
 import {OrderStatus} from "@/types/OrserStatus";
 import {Product} from "@/types/Product";
+import {Category} from "@/types/Category";
 
 // PRODUTO TEMPORARIO
 const tmpProduct: Product = {
@@ -59,9 +60,9 @@ export const api = {
                     orders.push({
                         id: parseInt('12' + i),
                         status: statususes[Math.floor(Math.random() * 3)],
-                        orderDate: '2023-01-02 18:30',
-                        userid: '1',
-                        userName: 'henrique',
+                        orderDate: "2023-01-02 18:30",
+                        userid: "1",
+                        userName: "Henrique",
                         shippingAddress: {
                             id: 99,
                             cep: 779944400,
@@ -81,8 +82,7 @@ export const api = {
                         total: 120,
                         products: [
                             {qt: 2, product: tmpProduct},
-                            {qt: 1, product: {...tmpProduct, id: 100, name: 'Burger Teste 2'}},
-                            {qt: 4, product: {...tmpProduct, id: 21, name: 'Burger Teste 3'}},
+                            {qt: 1, product: {...tmpProduct, id: 100, name: 'Burger Teste 2'}}
                         ]
                     })
                 }
@@ -92,5 +92,34 @@ export const api = {
     },
     changeOrderStatus: async(id: number, newStatus: OrderStatus)=>{
         return true
+    },
+    getCategories: async():Promise<Category[]> =>{
+        const list: Category[] = [
+            {id: 99, name: 'Burgers'},
+            {id: 98, name: 'Bebidas'},
+            {id: 97, name: 'Doces'},
+        ]
+        return new Promise(resolve =>{
+            setTimeout(()=>{
+                resolve(list)
+            }, 200)
+        })
+    },
+    getProducts: async(): Promise<Product[]> =>{
+        const list : Product[] = [
+            {...tmpProduct, id: 123},
+            {...tmpProduct, id: 124},
+            {...tmpProduct, id: 125},
+            {...tmpProduct, id: 126},
+            {...tmpProduct, id: 127},
+            {...tmpProduct, id: 128},
+            {...tmpProduct, id: 129},
+            {...tmpProduct, id: 130},
+        ]
+        return new Promise(resolve =>{
+            setTimeout(()=>{
+                resolve(list)
+            }, 500)
+        })
     }
 }
