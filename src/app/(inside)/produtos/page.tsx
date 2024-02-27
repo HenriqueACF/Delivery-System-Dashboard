@@ -5,6 +5,7 @@ import {Box, Button, Table, TableBody, TableCell, TableHead, TableRow, Typograph
 import {Product} from "@/types/Product";
 import {Category} from "@mui/icons-material";
 import {api} from "@/libs/api";
+import {ProductTableSkeleton} from "@/components/ProductTableSkeleton";
 
 const Page = () => {
     const [loading, setLoading] = useState(false)
@@ -42,15 +43,33 @@ const Page = () => {
                 <Table>
                     <TableHead>
                         <TableRow>
-                            <TableCell sx={{width: 50, display:{ xs: 'none', md: 'table-cell'}}}>ID</TableCell>
+                            <TableCell
+                                sx={{width: 50, display:{ xs: 'none', md: 'table-cell'}}}
+                            >ID</TableCell>
                             <TableCell>Imagem</TableCell>
                             <TableCell>Nome</TableCell>
-                            <TableCell sx={{display:{ xs: 'none', md: 'table-cell'}}}>Preço</TableCell>
-                            <TableCell sx={{display:{ xs: 'none', md: 'table-cell'}}}>Categoria</TableCell>
-                            <TableCell sx={{xs: 50, md: 130}}>Ações</TableCell>
+                            <TableCell
+                                sx={{display:{ xs: 'none', md: 'table-cell'}}}
+                            >Preço</TableCell>
+                            <TableCell
+                                sx={{display:{ xs: 'none', md: 'table-cell'}}}
+                            >Categoria</TableCell>
+                            <TableCell
+                                sx={{xs: 50, md: 130}}
+                            >Ações</TableCell>
                         </TableRow>
                     </TableHead>
-                    <TableBody></TableBody>
+                    <TableBody>
+                        {loading &&
+                            <>
+                                <ProductTableSkeleton/>
+                                <ProductTableSkeleton/>
+                                <ProductTableSkeleton/>
+                                <ProductTableSkeleton/>
+                                <ProductTableSkeleton/>
+                            </>
+                        }
+                    </TableBody>
                 </Table>
             </Box>
         </>
