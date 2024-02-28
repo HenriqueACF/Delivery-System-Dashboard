@@ -9,7 +9,7 @@ export const Header = () => {
     const router = useRouter()
     const [drawerOpen, setDrawerOpen] = useState(false)
 
-    const pageTitle = "Painel SaaS-Estabelecimento"
+    const pageTitle = "Painel Estabelecimento"
 
     const handleLogout = () => {
         router.push('/login')

@@ -6,7 +6,7 @@ import {Category} from "@/types/Category";
 // PRODUTO TEMPORARIO
 const tmpProduct: Product = {
     id: 99,
-    image: 'image.png',
+    image: 'https://picsum.photos/seed/picsum/200/300',
     category: {
         id: 99,
         name: 'Burger Teste Categoria'
@@ -120,6 +120,13 @@ export const api = {
             setTimeout(()=>{
                 resolve(list)
             }, 500)
+        })
+    },
+    deleteProduct: async(id: number):Promise<Boolean>=>{
+        return new Promise(resolve =>{
+            setTimeout(()=>{
+                resolve(true)
+            }, 1000)
         })
     }
 }
