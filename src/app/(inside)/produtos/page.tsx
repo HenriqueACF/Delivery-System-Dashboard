@@ -21,15 +21,22 @@ import {Category} from "@mui/icons-material";
 import {api} from "@/libs/api";
 import {ProductTableSkeleton} from "@/components/ProductTableSkeleton";
 import {ProductTableItem} from "@/components/ProductTableItem";
+import {ProductEditDialog} from "@/components/ProductEditDialog";
 
 const Page = () => {
     const [loading, setLoading] = useState(false)
     const [products, setProducts] = useState<Product[]>([])
     const [categories, setCategories] = useState<Category[]>([])
 
+    //DELETE STATE
     const [showDeleteDialog, setShowDeleteDialog] = useState(false)
     const [productToDelete, setProductToDelete] = useState<Product>()
     const [loadingDelete, setLoadingDelete] = useState(false)
+
+    //EDIT DIALOG
+    const [editDialogOpen, setEditDialogOpen] = useState(false)
+    const [productToEdit, setProductToEdit] = useState<Product>()
+    const [loadingEdit, setLoadingEdit] = useState(false)
 
     useEffect(()=>{
         getProducts()
@@ -42,11 +49,18 @@ const Page = () => {
         setLoading(false)
     }
 
+    //NEW && EDIT PRODUCT
     const handleNewProduct = () =>{
-
+        setProductToEdit(undefined)
+        setEditDialogOpen(true)
     }
 
     const handleEditProduct = (product: Product) =>{
+        setProductToEdit(product)
+        setEditDialogOpen(true)
+    }
+
+    const handleSaveEditDialog = () => {
 
     }
 
@@ -129,6 +143,15 @@ const Page = () => {
                         <Button disabled={loadingDelete} onClick={handleConfirmDelete}>Sim</Button>
                     </DialogActions>
                 </Dialog>
+
+                <ProductEditDialog
+                    open={editDialogOpen}
+                    onClose={() => setEditDialogOpen(false)}
+                    onSave={handleSaveEditDialog}
+                    disabled={loadingEdit}
+                    product={productToEdit}
+                    categories={categories}
+                />
 
             </Box>
         </>
