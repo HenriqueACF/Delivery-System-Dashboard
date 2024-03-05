@@ -128,5 +128,19 @@ export const api = {
                 resolve(true)
             }, 1000)
         })
+    },
+    createProduct: async(form: FormData) =>{
+        return new Promise(resolve =>{
+            setTimeout(()=>{
+                resolve(true)
+            }, 1000)
+        })
+    },
+    updateProduct: async(form: FormData) =>{
+        return new Promise(resolve =>{
+            setTimeout(()=>{
+                resolve(true)
+            }, 1000)
+        })
     }
 }

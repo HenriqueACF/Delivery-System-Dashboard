@@ -1,6 +1,6 @@
 "use client"
 
-import React, {useEffect, useState} from "react";
+import React, {FormEvent, useEffect, useState} from "react";
 import {
     Box,
     Button,
@@ -36,7 +36,7 @@ const Page = () => {
     //EDIT DIALOG
     const [editDialogOpen, setEditDialogOpen] = useState(false)
     const [productToEdit, setProductToEdit] = useState<Product>()
-    const [loadingEdit, setLoadingEdit] = useState(false)
+    const [loadingEditDialog, setLoadingEditDialog] = useState(false)
 
     useEffect(()=>{
         getProducts()
@@ -60,8 +60,21 @@ const Page = () => {
         setEditDialogOpen(true)
     }
 
-    const handleSaveEditDialog = () => {
+    const handleSaveEditDialog = async(event: FormEvent<HTMLFormElement>) => {
+        let form = new FormData(event.currentTarget)
 
+        setLoadingEditDialog(true)
+
+        if(productToEdit){
+            form.append('id', productToEdit.id.toString())
+            await api.updateProduct(form)
+        } else {
+            await api.createProduct(form)
+        }
+
+        setLoadingEditDialog(false)
+        setEditDialogOpen(false)
+        getProducts()
     }
 
     //DELETE PRODUCT
@@ -148,7 +161,7 @@ const Page = () => {
                     open={editDialogOpen}
                     onClose={() => setEditDialogOpen(false)}
                     onSave={handleSaveEditDialog}
-                    disabled={loadingEdit}
+                    disabled={loadingEditDialog}
                     product={productToEdit}
                     categories={categories}
                 />
